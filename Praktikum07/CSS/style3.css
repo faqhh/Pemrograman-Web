@@ -1,0 +1,43 @@
+div{ 
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.satu{
+    background-color: yellow;
+    position: absolute;
+    width: 20%; 
+    height: 80px;
+}
+.dua{
+    background-color:  coral;
+    width: 75%;
+    margin-left: auto;
+    height: 80px;
+
+}
+.tiga{
+    background-color: green;
+    position: absolute;
+    width: 20%;
+    height: 400px;
+    
+}
+.empat{
+    background-color: gainsboro;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    height: 400px;
+}
+.lima{
+    background-color: aqua;
+    width: 20%;
+    margin-left: auto;
+    height: 400px;
+}
+.enam{
+    background-color: blue;
+    height: 80px;
+}

@@ -1,0 +1,11 @@
+.container{
+    background-color: aqua;
+    border: 2px solid black;
+    text-align: center;
+}
+img{
+    width: 20%;
+    margin: 10px 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
