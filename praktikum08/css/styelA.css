@@ -1,0 +1,43 @@
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "nav header header header"
+    "nav article article aside"
+    "nav footer footer footer";
+}
+.nav {
+    background-color: pink;
+    grid-area: nav;
+    font-size: larger;
+    padding: 20px;
+}
+
+.header {
+    background-color:  rgb(221, 203, 36);
+    grid-area: header;
+    font-size: larger;
+    padding: 20px;
+}
+
+.article {
+    background-color: white;
+    grid-area: article;
+    font-size: larger;
+    padding: 20px;
+}
+
+.aside {
+    background-color: aqua;
+    grid-area: aside;
+    font-size: larger;
+    padding: 20px;
+}
+
+.footer {
+    background-color: rgb(221, 203, 36);
+    grid-area: footer;
+    font-size: larger;
+    padding: 20px;
+}
