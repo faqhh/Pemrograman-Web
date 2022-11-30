@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkiran Mall Cibubur Junction</title>
+</head>
+<body>
+    <h2>Harga Parkir Mall Cibubur Junction</h2>
+    <label for="in">Jam Masuk</label>
+    <input type="number" id="in">
+    <br>
+    <label for="out">jam Keluar</label>
+    <input type="number" id="out">
+    <br>
+    <span id="durasi"></span>
+    <br>
+    <span id="harga"></span>
+    <br>
+    <button type="button" onclick="hitung_parkir()">Hitung</button>
+
+
+    <script>
+        function hitung_parkir(){
+            let Jam_masuk = document.getElementById("in").value;
+            let jam_keluar = document.getElementById("out").value;
+            let durasi = jam_keluar-Jam_masuk;
+
+            let tarif_awal = 3000;
+            let selisih_waktu = Math.round(durasi-2);
+            let tarif_lanjut = selisih_waktu*1000;
+            let total_harga = tarif_awal + tarif_lanjut;
+
+            document.getElementById("durasi").innerHTML = "durasi = " + durasi + "jam";
+            document.getElementById("harga").innerHTML ="harga = Rp." + total_harga;
+
+        }
+    </script>
+</body>
+</html>
