@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOMOR 4</title>
+    <link rel="stylesheet" href="css/style4.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs_rp.html">Nomor 2</a></li>
+                <li><a href="chatbox.html">Nomor 3</a></li>
+                <li><a href="img-picker.html">Nomor 4</a></li>
+                <li><a href="from.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <select id="pilihan" onchange="cetakGambar()">
+        <option value="">---PILIH-----</option>
+        <OPtion value="bison">Bison</OPtion>
+        <OPtion value="gajah">Gajah</OPtion>
+        <OPtion value="gorila">Gorila</OPtion>
+        <OPtion value="macan">Macan</OPtion>
+        <OPtion value="singa">Singa</OPtion>
+    </select>
+    <br>
+    <img id="gambar">
+
+
+    <script>
+        function cetakGambar(){
+            let pil = document.getElementById("pilihan").value;
+            let image = document.getElementById("gambar");
+
+            if(pil == "bison"){
+                alert("ini foto bison");
+                image.setAttribute("src", "img/bison.jpg");
+            }else if(pil == "gajah"){
+                alert("ini foto gajah");
+                image.setAttribute("src", "img/gajah.jpg");     
+            }else if(pil == "gorila"){
+                alert("ini foto gorila");
+                image.setAttribute("src", "img/gorila.jpg");  
+            }else if(pil == "singa"){
+                alert("ini foto singa");
+                image.setAttribute("src", "img/singa.jpg");  
+            }else if(pil == "macan"){
+                alert("ini foto macan");
+                image.setAttribute("src", "img/macan.jpg");  
+            }
+        }
+    </script>
+</body>
+</html>

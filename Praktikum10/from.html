@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="">Nomor 2</a></li>
+                <li><a href="chatbox.html">Nomor 3</a></li>
+                <li><a href="img-picker.html">Nomor 4</a></li>
+                <li><a href="form.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <form action="#">
+            <div class="form-group">
+                <div>       
+                    <label style="float: left;" for="name">Nama Pelanggan</label><p id="nama"></p>
+                </div>
+                <input type="text" placeholder="Nama Pelanggan" id="name">
+            </div>
+            <br>
+            <div class="form-group">
+                <div>
+                    <label style="float: left;" for="email">Email</label><p id="imel"></p>
+                </div>
+                <br>
+                <input type="email" placeholder="Email" id="email1">
+            </div>
+            <br>
+            <div class="form-group">
+                <div>
+                    <label for="jam">Jam Keberangkatan</label><p id="jamm"></p>
+                </div>
+                <input type="time" placeholder="Jam Keberangkatan" id="jam">
+            </div>
+            <br>
+            <div class="form-group">
+                <div> 
+                    <label for="tujuan">Tujuan Keberangkatan</label><p id="tjn"></p>
+                </div>
+                <input type="text" placeholder="Tujuan Keberangkatan" id="tujuan">
+            </div>
+            <br>
+            <div class="form-group">
+                <div>
+                    <label for="tiket">Jumlah Tiket</label><p id="tkt"></p>
+                </div>
+                <input type="number" placeholder="Jumlah Tiket" id="tiket">
+            </div>
+            <br>
+            <div class="form-group">
+                <input onclick="validasi()" type="submit" value="Pesan Sekarang">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validasi(){
+            let nama = document.getElementById("name").value;
+            let p = document.getElementById("nama");
+
+            let email = document.getElementById("email1").value;
+            let p1 = document.getElementById("imel");
+
+            let jam = document.getElementById("jam").value;
+            let p2 = document.getElementById("jamm");
+
+            let tujuan = document.getElementById("tujuan").value;
+            let p3 = document.getElementById("tjn");
+
+            let tiket = document.getElementById("tiket").value;
+            let p4 = document.getElementById("tkt");
+
+            if(nama == ""){
+                alert("Nama Wajib Di Isi!!")
+            }else if(nama.length > 30){
+                alert("Nama Tidak Valid / Maksimum 30 Karakter!!")
+            }else{
+                p.innerHTML = `<p></p>`;
+            }
+
+            if(email == ""){
+                alert("Email Wajib Di Isi!!")
+            }else if(email.length <= 9 || email == "@gmail.com"){
+                alert("Email Tidak Valid!!")
+            }else{
+                p1.innerHTML = `<p></p>`;
+            }
+
+            if(jam == ""){
+                alert("Jam Keberangkatan Wajib Diisi!!")
+            }else{
+                p2.innerHTML = `<p></p>`
+            }
+            
+            if(tujuan == ""){
+                alert("Tujuan Keberangkatan Wajib Di Isi!!")
+            }else{
+                p3.innerHTML = `<p></p>`
+            }
+
+            if(tiket == "" || tiket <= 0){
+                alert("Pembelian Tiket Minimal 1 Tiket Dan Maximal 10 Tiket!!")
+            }else if(tiket > 10){
+                alert("Maximum Pembelian 10 Tiket!!")
+            }else{
+                p4.innerHTML = `<p></p>`
+            }
+        }
+    </script>
+</body>
+</html>

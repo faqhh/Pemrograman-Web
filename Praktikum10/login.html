@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs_rp.html">Nomor 2</a></li>
+                <li><a href="chatbox.html">Nomor 3</a></li>
+                <li><a href="img-picker.html">Nomor 4</a></li>
+                <li><a href="from.html">Nomor 5</a></li>
+            </ul>>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="main">
+            <label for="Username">Username</label>
+            <input type="text" id="Username">
+            <label for="Password">Password</label>
+            <input type="password" id="Password">
+            <br>
+            <button type="button" onclick="login()">login</button>
+        </div>
+    </div>
+ 
+    <script>
+        function login(){
+            let uname = document.getElementById("Username").value;
+            let pass = document.getElementById("Password").value;
+
+            if(uname == "ahmad" && pass == "zdrcgu1234"){
+                alert("yuuhuuuu berhasilll!!!!");
+                location.href = "login-sukses.html";
+            }else {
+                alert("yahhh gagall");
+            }
+        }
+    </script>
+</body>
+</html>
